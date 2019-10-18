@@ -1,0 +1,8 @@
+version: '2'
+services:
+  forwarder:
+    image: "rsyslog-forwarder"
+    volumes:
+      - ./etc/rsyslog.conf:/etc/rsyslog.conf
+    ports:
+      - "514:514/udp"
